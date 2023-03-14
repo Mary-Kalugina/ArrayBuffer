@@ -1,17 +1,14 @@
 export default class ArrayBufferConverter {
-  load(fnc) {
-    console.log(fnc)
+  /* eslint-disable */load(fnc) {
     return fnc;
   }
 
-  toString(buffer) {
-    console.log(buffer)
+  /* eslint-disable */toString(buffer) {
     let text = '';
     const bufferView = new Uint16Array(buffer);
     for (let i = 0; i < bufferView.length; i += 1) {
       text += String.fromCharCode(bufferView[i]);
     }
-    console.log(text)
     return text;
   }
 }
